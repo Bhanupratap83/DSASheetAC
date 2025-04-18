@@ -1,7 +1,8 @@
 import java.util.*;
 
 public class FindMissingAndRepeatingValue{
-    HashSet<Integer> set = new HashSet<>();
+    public int[] findMissingAndRepeatedValues(int[][] grid) {
+        HashSet<Integer> set = new HashSet<>();
         int n = grid.length;
         int sq = n * n;
 
@@ -20,4 +21,5 @@ public class FindMissingAndRepeatingValue{
         int totalSum = sq * (sq+1) / 2;
         ans[1] = totalSum - currSum;
         return ans;
+    }
 }
